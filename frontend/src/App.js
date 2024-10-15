@@ -11,7 +11,7 @@ const CartOverlay = React.lazy(() => import('./Components/CartOverlay'));
 
 // Initialize Apollo Client
 const client = new ApolloClient({
-  uri: 'http://localhost:8000/graphql.php',  // Replace with your GraphQL server URI
+  uri: 'https://scandiwebtask-c44363ca7aa2.herokuapp.com/graphql.php',  // Replace with your GraphQL server URI
   cache: new InMemoryCache(),
 });
 
