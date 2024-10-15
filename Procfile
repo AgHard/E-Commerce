@@ -1,2 +1,2 @@
-web: cd backend && composer install && vendor/bin/heroku-php-apache2 public/
+web: vendor/bin/heroku-php-apache2 backend/public/
 build: cd frontend && npm install && npm run build
