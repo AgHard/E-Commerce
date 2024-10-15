@@ -1,0 +1,84 @@
+/* Container for the header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;  /* Reduced padding for faster rendering */
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  gap: 15px;  /* Reduced gap for tighter layout */
+  margin-left: 20px; /* Reduced margin for better performance */
+}
+
+/* Link styles with dynamic active state */
+.nav-link {
+  color: #000;
+  font-weight: normal;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.1rem;  /* Use rem units for better scaling */
+  font-family: 'Times New Roman', serif;
+}
+
+.nav-link.active {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #28a745;
+  transition: background-color 0.2s ease;  /* Faster transition for snappier UI */
+}
+
+/* Centered logo */
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* Cart icon container */
+.cart-icon-container {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Cart icon (SVG) */
+.cart-icon {
+  width: 48px;  /* Reduced size for faster rendering */
+  height: 48px;
+  fill: #000;
+}
+
+/* Cart item count badge */
+.cart-item-count {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;  /* Slightly smaller for consistency */
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: bold;
+}

@@ -1,0 +1,112 @@
+.product-list-container {
+  padding: 40px; /* Increase padding for more space around the grid */
+  max-width: 1200px; /* Limit max width to center the grid */
+  margin: 0 auto; /* Center the grid */
+}
+
+h2 {
+  color: #333; /* Darker color for the title */
+  margin-bottom: 30px; /* Add more space under the title */
+  font-size: 24px; /* Slightly increase the font size */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Increase the number of columns */
+  gap: 40px; /* Increase spacing between products */
+}
+
+.product-card {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  padding: 20px; /* Increase padding for better spacing inside the card */
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transform for zoom effect */
+}
+
+.product-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05); /* Add slight zoom effect on hover */
+}
+
+.product-image {
+  width: 100%;
+  height: 240px; /* Maintain square dimensions for all images */
+  object-fit: cover; /* Prevent image distortion */
+  border-radius: 8px; /* Add rounded corners */
+}
+
+.product-info {
+  text-align: left;
+  margin-top: 15px; /* Increase spacing between image and text */
+}
+
+.product-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
+}
+
+.product-info p {
+  color: #28a745;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 16px; /* Adjust the font size for price display */
+}
+
+/* Quick Shop button (Green cart) */
+.quick-shop {
+  position: absolute;
+  bottom: 20px; /* Adjust position */
+  right: 20px;
+  background-color: #32c282; /* Use a bright green color */
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  transition: background-color 0.3s ease;
+}
+
+.quick-shop:hover {
+  background-color: #28a745; /* Darken the button on hover */
+}
+
+/* Show quick shop on hover */
+.product-card:hover .quick-shop {
+  display: block;
+}
+
+/* Cart icon inside the quick shop */
+.cart-icon {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+/* Out-of-stock products */
+.out-of-stock .product-image {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Auto-adjust columns based on screen size */
+  gap: 20px; /* Adjust spacing between product cards */
+}
+
+.out-of-stock-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px; /* Add more padding for better visibility */
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+
