@@ -6,12 +6,14 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ ../frontend/build/$1 [L]
 
-    # Route API requests to graphql.php
-    RewriteCond %{REQUEST_URI} ^/graphql$
-    RewriteRule ^graphql$ /graphql.php [QSA,L]
-
-    # If no file is found, serve the React app's index.html
+    # If the requested file doesn't exist, serve the React app's index.html
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ ../frontend/build/index.html [L]
+
+    # Route API requests to graphql.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^graphql$ backend/graphql.php [QSA,L]
+
 </IfModule>

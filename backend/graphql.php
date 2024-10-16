@@ -9,8 +9,9 @@ header('Content-Type: application/json');
 use GraphQL\GraphQL;
 use App\GraphQL\SchemaBuilder;
 use Doctrine\ORM\EntityManager;
-require_once __DIR__ . '/../vendor/autoload.php'; // Adjusted path
-require_once __DIR__ . '/config/doctrine.php'; // Adjusted path for Doctrine
+require_once 'vendor/autoload.php';
+require_once 'doctrine.php'; // Include your Doctrine setup
+
 // Build the schema
 $schema = SchemaBuilder::build($entityManager);
 
