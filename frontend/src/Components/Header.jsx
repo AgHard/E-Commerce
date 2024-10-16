@@ -28,7 +28,7 @@ const Header = () => {
     `;
 
     try {
-      const data = await request('https://scandiwebtask-c44363ca7aa2.herokuapp.com/graphql.php', query);
+      const data = await request('http://localhost:8000/graphql.php', query);
       setCategories(data.categories);
     } catch (error) {
       console.error('Error fetching categories:', error);

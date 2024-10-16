@@ -21,7 +21,7 @@ const ProductDetails = ({ openCartOverlay }) => {
 
   useEffect(() => {
     const fetchProductDetails = async () => {
-      const endpoint = 'https://scandiwebtask-c44363ca7aa2.herokuapp.com/graphql.php';
+      const endpoint = 'http://localhost:8000/graphql.php';
 
       const query = gql`
         query($id: String!) {
