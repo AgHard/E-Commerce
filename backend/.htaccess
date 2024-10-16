@@ -14,5 +14,5 @@
     # Route API requests to graphql.php
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^graphql.php$ graphql.php [QSA,L]
+    RewriteRule ^(.*)$ graphql.php [QSA,L]
 </IfModule>
