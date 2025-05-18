@@ -126,10 +126,6 @@ npm run build – Create production build
 
 npm test – Run test suite (if configured)
 
-📸 Screenshots
-
-Add your app screenshots or product list previews here
-
 🤝 Contributing
 
 Contributions are welcome!
